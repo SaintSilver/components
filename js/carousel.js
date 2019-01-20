@@ -9,7 +9,7 @@ var totalSlides = slides.length;
 //get the slide width
 var sliderWidth = slideWrapper.clientWidth;
 //set width of items
-slides.forEach(function(element){
+slides.forEach(function (element) {
     element.style.width = sliderWidth + 'px';
 })
 //set width to be 'x' times the number of slides
@@ -33,7 +33,9 @@ slideWrapper.addEventListener('mouseover', function () {
 });
 slideWrapper.addEventListener('mouseleave', function () {
     this.classList.remove('active');
-    autoSlider = setInterval(function(){plusSlides(1);}, 3000);
+    autoSlider = setInterval(function () {
+        plusSlides(1);
+    }, 3000);
 });
 
 
@@ -58,18 +60,20 @@ function showSlides(n) {
 }
 
 //pagination
-slides.forEach(function(){
+slides.forEach(function () {
     var li = document.createElement('li');
     document.querySelector('#slider-pagination-wrap ul').appendChild(li);
 })
 
 function pagination() {
     var dots = document.querySelectorAll('#slider-pagination-wrap ul li');
-    dots.forEach(function(element) {
+    dots.forEach(function (element) {
         element.classList.remove('active');
     });
     dots[slideIndex].classList.add('active');
 }
 
 pagination();
-var autoSlider = setInterval(function(){plusSlides(1);}, 3000);
+var autoSlider = setInterval(function () {
+    plusSlides(1);
+}, 3000);
