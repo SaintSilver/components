@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MODAL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/modal.css" />
+    <link rel="stylesheet" href="../js/highlight/atom-one-dark.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>MODAL</h1>
+        <button class="modal-open-btn">OPEN MODAL</button>
+    </div>
+    <div class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close-x">×</button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                in culpa qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                in culpa qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                in culpa qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                in culpa qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+            <div class="modal-footer">
+                <button class="modal-close-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- code -->
+    <h2>HTML</h2>
+    <pre><code class="html">
+&lt;button class="modal-open-btn">OPEN MODAL&lt;/button>
+
+&lt;div class="modal">
+    &lt;div class="modal-overlay">&lt;/div>
+    &lt;div class="modal-content">
+        &lt;div class="modal-header">
+            &lt;button class="modal-close-x">×&lt;/button>
+            &lt;h4 class="modal-title">Modal title&lt;/h4>
+        &lt;/div>
+    &lt;div class="modal-body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+        in culpa qui officia deserunt mollit anim id est laborum.
+    &lt;/div>
+    &lt;div class="modal-footer">
+        &lt;button class="modal-close-btn">Close&lt;/button>
+    &lt;/div>
+    &lt;/div>
+&lt;/div>
+    </code></pre>
+
+    <h2>CSS</h2>
+    <pre><code class="css">
+.modal-open {
+    overflow: hidden;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 999;
+    -webkit-transition: all 0.35s linear;
+    -o-transition: all 0.35s linear;
+    transition: all 0.35s linear;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 6px;
+    -webkit-transition: all 0.35s linear;
+    -o-transition: all 0.35s linear;
+    transition: all 0.35s linear;
+}
+
+.modal-header {
+    min-height: 16px;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-header>.modal-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.modal-header>.modal-close-x {
+    margin-top: -2px;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .2;
+    color: #000;
+}
+
+.modal-body {
+    position: relative;
+    padding: 15px;
+}
+
+.modal-footer {
+    padding: 15px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+}
+
+.modal-footer>.modal-close-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+
+}
+
+.modal-footer>.modal-close-btn:hover {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+    text-decoration: none;
+}
+
+.modal-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-active .modal-content {
+    margin: 10% auto;
+}
+
+@media (max-width: 1023px) {
+    .modal-content {
+        width: 85%;
+    }
+}
+
+@media (max-width: 767px) {
+    .modal-content {
+        width: 85%;
+    }
+}
+    </code></pre>
+
+    <h2>JavaScript</h2>
+    <pre><code class="javascript">
+var modalOpenBtn = document.querySelector('.modal-open-btn');
+var modal = document.querySelector('.modal');
+var modalOverlay = document.querySelector('.modal-overlay');
+var modalCloseX = document.querySelector('.modal-close-x');
+var modalCloseBtn = document.querySelector('.modal-close-btn');
+
+function getScrollbarWidth() {
+    return window.innerWidth - document.documentElement.clientWidth;
+}
+
+function openModal() {
+    modal.classList.add('modal-active');
+    document.body.style.paddingRight = getScrollbarWidth()+'px';
+    document.body.classList.add('modal-open');
+}
+
+function closeModal() {
+    modal.classList.remove('modal-active');
+    document.body.removeAttribute("style");
+    document.body.classList.remove('modal-open');
+}
+
+modalOpenBtn.addEventListener('click', openModal);
+modalOverlay.addEventListener('click', closeModal);
+modalCloseBtn.addEventListener('click', closeModal);
+modalCloseX.addEventListener('click', closeModal);
+document.addEventListener('keyup', function (e) {
+    if (e.keyCode === 27) {
+        closeModal();
+    }
+});     
+    </code></pre>
+
+    <script src="../js/highlight/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+    <script src="../js/modal.js"></script>
+</body>
+
+</html>
