@@ -35,6 +35,7 @@ ul, li {
 #slider-wrap ul#slider li>div h3 {
     font-size: 36px;
     text-transform: uppercase;
+    margin: 0;
 }
 
 #slider-wrap ul#slider li>div span {
